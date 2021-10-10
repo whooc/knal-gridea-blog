@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>可能爱了</title>
+<title>CentOS 安装使用 Syncthing | 可能爱了</title>
 <meta name="description" content="花开花落自有因！">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -23,6 +23,7 @@
 
   </head>
   <body>
+  
     <nav class="navbar border fixed split-nav">
   <div class="nav-brand">
     <h3><a href="https://kn.al">可能爱了</a></h3>
@@ -76,123 +77,69 @@
   </div>
 </nav>
 
-
     <div id="top" class="row site">
       <div class="sm-12 md-8 col">
         <div class="paper">
+          <article class="article">
+            <h1>CentOS 安装使用 Syncthing</h1>
+            <p class="article-meta">
+              2021-10-10
+              
+                <a href="https://kn.al/tag/4yEHwerJhi/" class="badge ">
+                  centos
+                </a>
+              
+                <a href="https://kn.al/tag/2JNDqG6P8o/" class="badge ">
+                  syncthing
+                </a>
+              
+            </p>
+            
+            <div class="post-content">
+              <p>最近发现服务器的文件越来越多，保存到本地才能让人安心。<br>
+于是我使用Centos的服务器与Openwrt路由器进行文件同步！<br>
+Syncthing官网：https://syncthing.net/<br>
+安装Syncthing</p>
+<p>cd /home<br>
+wget https://github.com/syncthing/syncthing/releases/download/v1.18.2/syncthing-linux-amd64-v1.18.2.tar.gz<br>
+可以到[GitHub][1]查看最新版本<br>
+#解压<br>
+tar -zxvf syncthing-linux-amd64-v1.3.3.tar.gz<br>
+#进入解压目录将syncthing程序复制到/usr/local/bin目录<br>
+cd syncthing-linux-amd64-v1.3.3<br>
+cp syncthing /usr/local/bin/</p>
+<p>运行</p>
+<p>运行一次syncting</p>
+<p>#启动syncthing命令<br>
+syncthing</p>
+<p>然后ctrl+c结束程序<br>
+修改配置</p>
+<p>sed -i 's/127.0.0.1/0.0.0.0/g' '/root/.config/syncthing/config.xml'</p>
+<p>后台运行</p>
+<p>nohup syncthing &amp;</p>
+<p>日志</p>
+<p>在/var/log/syncthing.log</p>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
           
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://kn.al/post/centos-an-zhuang-shi-yong-syncthing/">CentOS 安装使用 Syncthing</a>
-    </h2>
-    <p class="article-meta">
-      2021-10-10
-      
-        <a href="https://kn.al/tag/4yEHwerJhi/" class="badge success">
-          centos
-        </a>
-      
-        <a href="https://kn.al/tag/2JNDqG6P8o/" class="badge warning">
-          syncthing
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://kn.al/post/centos-an-zhuang-shi-yong-syncthing/" class="readmore-link">
-        <button>
-          进去看看
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://kn.al/post/zi-ben-jia-zen-yang-bo-xue-he-ya-po-gong-ren/"> 资本家怎样剥削和压迫工人</a>
-    </h2>
-    <p class="article-meta">
-      2021-10-10
-      
-        <a href="https://kn.al/tag/E9mU2bthpR/" class="badge secondary">
-          社会
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://kn.al/post/zi-ben-jia-zen-yang-bo-xue-he-ya-po-gong-ren/" class="readmore-link">
-        <button>
-          进去看看
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://kn.al/post/yue-du-de-yi-chu/">阅读的益处</a>
-    </h2>
-    <p class="article-meta">
-      2021-10-10
-      
-        <a href="https://kn.al/tag/L4qp-FgpWP/" class="badge success">
-          阅读
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://kn.al/post/yue-du-de-yi-chu/" class="readmore-link">
-        <button>
-          进去看看
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://kn.al/post/hello-gridea/">Hello Gridea</a>
-    </h2>
-    <p class="article-meta">
-      2018-12-12
-      
-        <a href="https://kn.al/tag/BzPj9DjVZ/" class="badge secondary">
-          Gridea
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-
-    </p>
-    <div class="row">
-      <a href="https://kn.al/post/hello-gridea/" class="readmore-link">
-        <button>
-          进去看看
-        </button>
-      </a>
-    </div>
-  </article>
-
-
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://kn.al/post/zi-ben-jia-zen-yang-bo-xue-he-ya-po-gong-ren/">
+                <h3 class="post-title">
+                   资本家怎样剥削和压迫工人
+                </h3>
+              </a>
+            </div>
+          
         </div>
         
-        <div class="row flex-edges">
-  
-  
-</div>
-
       </div>
-      
+
       <div class="sm-12 md-4 col sidebar">
   <div class="paper info-container">
     <img src="https://kn.al/images/avatar.png?v=1633829893634" class="no-responsive avatar">
@@ -255,15 +202,15 @@
     </div>
     <div class="row">
       
-        <a href="https://kn.al/tag/4yEHwerJhi/" class="badge secondary">
+        <a href="https://kn.al/tag/4yEHwerJhi/" class="badge success">
           centos
         </a>
       
-        <a href="https://kn.al/tag/2JNDqG6P8o/" class="badge secondary">
+        <a href="https://kn.al/tag/2JNDqG6P8o/" class="badge success">
           syncthing
         </a>
       
-        <a href="https://kn.al/tag/E9mU2bthpR/" class="badge secondary">
+        <a href="https://kn.al/tag/E9mU2bthpR/" class="badge ">
           社会
         </a>
       
@@ -282,7 +229,9 @@
   </div>
 </div>
 
+
     </div>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 <script type="application/javascript">
