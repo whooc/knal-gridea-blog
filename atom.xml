@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kn.al</id>
     <title>可能●爱了</title>
-    <updated>2021-10-10T13:07:45.533Z</updated>
+    <updated>2021-10-12T12:39:54.729Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kn.al"/>
     <link rel="self" href="https://kn.al/atom.xml"/>
@@ -10,6 +10,36 @@
     <logo>https://kn.al/images/avatar.png</logo>
     <icon>https://kn.al/favicon.ico</icon>
     <rights>All rights reserved 2021, 可能●爱了</rights>
+    <entry>
+        <title type="html"><![CDATA[Windows断开远程桌面RDP后保持桌面活跃的方法]]></title>
+        <id>https://kn.al/windows-rdp/</id>
+        <link href="https://kn.al/windows-rdp/">
+        </link>
+        <updated>2021-10-12T12:01:53.000Z</updated>
+        <summary type="html"><![CDATA[<h2 id="前言">✅前言</h2>
+<p>在Windows server 2019上挂脚本时，没有外界显示器的服务器在断开远程桌面R后，桌面就会自动休眠，导致脚本停止运行。</p>
+<h2 id="探索解决">✅探索解决</h2>
+<p>解决办法无非有这几种：<br>
+1️⃣安装模拟显示器驱动，假装接入了显示器，找不到，失败！<br>
+2️⃣ 使用VNC Server或TeamViewer等其他远控方式。并不好用！</p>
+<h2 id="成功解决">✅成功解决</h2>
+<p>如果通过<code>%windir%\System32\tscon.exe RDP-Tcp#*NNN* /dest:console</code>手动断开RDP的话，原桌面也不会休眠，其中NNN是当前远程桌面的session。可用下面一段脚本自动完成：</p>
+]]></summary>
+        <content type="html"><![CDATA[<h2 id="前言">✅前言</h2>
+<p>在Windows server 2019上挂脚本时，没有外界显示器的服务器在断开远程桌面R后，桌面就会自动休眠，导致脚本停止运行。</p>
+<h2 id="探索解决">✅探索解决</h2>
+<p>解决办法无非有这几种：<br>
+1️⃣安装模拟显示器驱动，假装接入了显示器，找不到，失败！<br>
+2️⃣ 使用VNC Server或TeamViewer等其他远控方式。并不好用！</p>
+<h2 id="成功解决">✅成功解决</h2>
+<p>如果通过<code>%windir%\System32\tscon.exe RDP-Tcp#*NNN* /dest:console</code>手动断开RDP的话，原桌面也不会休眠，其中NNN是当前远程桌面的session。可用下面一段脚本自动完成：</p>
+<!-- more -->
+<p><code>for /f &quot;skip=1 tokens=3&quot; %%s in ('query user %USERNAME%') do ( %windir%\System32\tscon.exe %%s /dest:console )</code></p>
+<p><strong>另存为bat文件</strong></p>
+<h2 id="tips">✅TIPS</h2>
+<p>每次断开RDP时不要关闭RDP客户端，而通过<strong>右键→以管理员身份运行</strong>来手动断开RDP。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[阅读的好处]]></title>
         <id>https://kn.al/yue-du-de-hao-chu/</id>
