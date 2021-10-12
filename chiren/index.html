@@ -1,115 +1,188 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://kn.al</id>
-    <title>可能●爱了</title>
-    <updated>2021-10-12T12:51:38.531Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://kn.al"/>
-    <link rel="self" href="https://kn.al/atom.xml"/>
-    <subtitle>花开花落自有因！</subtitle>
-    <logo>https://kn.al/images/avatar.png</logo>
-    <icon>https://kn.al/favicon.ico</icon>
-    <rights>All rights reserved 2021, 可能●爱了</rights>
-    <entry>
-        <title type="html"><![CDATA[Windows断开远程桌面RDP后保持桌面活跃的方法]]></title>
-        <id>https://kn.al/windows-rdp/</id>
-        <link href="https://kn.al/windows-rdp/">
-        </link>
-        <updated>2021-10-12T12:01:53.000Z</updated>
-        <summary type="html"><![CDATA[<h2 id="前言">✅前言</h2>
-<p>在Windows server 2019上挂脚本时，没有外界显示器的服务器在断开远程桌面R后，桌面就会自动休眠，导致脚本停止运行。</p>
-<h2 id="探索解决">✅探索解决</h2>
-<p>解决办法无非有这几种：<br>
-1️⃣安装模拟显示器驱动，假装接入了显示器，找不到，失败！<br>
-2️⃣ 使用VNC Server或TeamViewer等其他远控方式。并不好用！</p>
-<h2 id="成功解决">✅成功解决</h2>
-<p>如果通过<code>%windir%\System32\tscon.exe RDP-Tcp#*NNN* /dest:console</code>手动断开RDP的话，原桌面也不会休眠，其中NNN是当前远程桌面的session。可用下面一段脚本自动完成：</p>
-]]></summary>
-        <content type="html"><![CDATA[<h2 id="前言">✅前言</h2>
-<p>在Windows server 2019上挂脚本时，没有外界显示器的服务器在断开远程桌面R后，桌面就会自动休眠，导致脚本停止运行。</p>
-<h2 id="探索解决">✅探索解决</h2>
-<p>解决办法无非有这几种：<br>
-1️⃣安装模拟显示器驱动，假装接入了显示器，找不到，失败！<br>
-2️⃣ 使用VNC Server或TeamViewer等其他远控方式。并不好用！</p>
-<h2 id="成功解决">✅成功解决</h2>
-<p>如果通过<code>%windir%\System32\tscon.exe RDP-Tcp#*NNN* /dest:console</code>手动断开RDP的话，原桌面也不会休眠，其中NNN是当前远程桌面的session。可用下面一段脚本自动完成：</p>
-<!-- more -->
-<p><code>for /f &quot;skip=1 tokens=3&quot; %%s in ('query user %USERNAME%') do ( %windir%\System32\tscon.exe %%s /dest:console )</code></p>
-<p><strong>另存为bat文件</strong></p>
-<h2 id="tips">✅TIPS</h2>
-<p>每次断开RDP时不要关闭RDP客户端，而通过<strong>右键→以管理员身份运行</strong>来手动断开RDP。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[阅读的好处]]></title>
-        <id>https://kn.al/yue-du-de-hao-chu/</id>
-        <link href="https://kn.al/yue-du-de-hao-chu/">
-        </link>
-        <updated>2021-10-10T12:42:09.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p>实话实说，我是不喜欢阅读的，不是不爱，只是被现代信息技术所影响，变得对接收“慢信息”不是那么喜欢，再加上自己内心的浮躁！真是耻于开口啊！<br>
-读书的好处是：开拓视野、陶冶情操、培养气质、增加知识面、提高写作能力、提升理解力、开拓智力发展、培养表达能力、激发交际能力、减轻压力 。</p>
-</blockquote>
-<h2 id="开拓视野">开拓视野</h2>
-<p>课外阅读可以让学生不出门，便知天下事，只有博览群书才能博识。阅读是一种巩固学习成果，丰富知识的有效手段。</p>
-<h2 id="陶冶情操">陶冶情操</h2>
-<p>学生通过课外阅读，可以知道古代岳飞、杨家将等是怎样精忠报国的；知道近代的林则徐、孙中山等是怎样爱国卫家的；知道雷锋是怎样助人为乐的，从而使自己的思想和境界得到洗涤和净化，也为自己树立远大的理想打下深厚的基础。</p>
-<h2 id="培养气质">培养气质</h2>
-<p>多读书的孩子，他的言谈举止会显示出一种气质，这种气质将会伴随孩子的一生。读得万卷书，孩子所接触的层面就会比较广，在与人交谈时也不会畏手畏脚，胸无点墨。</p>
-<h2 id="增加知识面">增加知识面</h2>
-<p>读书，就好比打磨玉石的过程，读的书多，在一些较难的学习领域，他就会培养出接受的能力，并能更好地理解与学习，这是任何辅导班也做不到的事情。</p>
-<h2 id="提高写作能力">提高写作能力</h2>
-<p>读书不仅可以使学生开阔视野，增长知识，培养良好的自学能力和阅读能力，还可以进一步帮助人们巩固课内学到的各种知识，提高他们的认读水平和作文能力。</p>
-<h2 id="提升理解力">提升理解力</h2>
-<p>喜欢读书，养成读书习惯，可以培养听力、理解力，成为“听话高手”，集中力和注意力也可以在不知不觉中养成。</p>
-<h2 id="开拓智力发展">开拓智力发展</h2>
-<p>读书多的人，当他思考问题时，丰富的语言能力会帮助他更深刻地理解问题并解决问题，因此他的钻研能力就会相对提高很多。</p>
-<h2 id="培养表达能力">培养表达能力</h2>
-<p>多读书的人，接触各种文章内容，对于书中人物的言语、行为，孩子会思考为什么这么说、这么做，这样一来，他的思考能力、解读能力得到培养，表达能力就自然得以培养和提升了。</p>
-<h2 id="激发交际能力">激发交际能力</h2>
-<p>读书多的人，语言能力强了，那么他在人际交往过程中，可以与人进行更有效的沟通与交流，从而激发其培养出良好的交际能力。</p>
-<h2 id="减轻压力">减轻压力</h2>
-<p>无论在工作上、个人交际中又或者日常生活中其他无尽的事情中承受多大的压力，当沉浸于一个好的故事时，所有的压力都会消失不见。一本好的小说可以带人进入另一个境界，而一篇迷人的文章将会分散你的注意力，让你享受现有的时刻，忘记压力，享受放松。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CentOS 安装使用 Syncthing]]></title>
-        <id>https://kn.al/centos-an-zhuang-shi-yong-syncthing/</id>
-        <link href="https://kn.al/centos-an-zhuang-shi-yong-syncthing/">
-        </link>
-        <updated>2021-10-10T01:37:51.000Z</updated>
-        <content type="html"><![CDATA[<p>最近发现服务器的文件越来越多，保存到本地才能让人安心。<br>
-于是我使用Centos的服务器与Openwrt路由器进行文件同步！<br>
-Syncthing官网：https://syncthing.net/<br>
-安装Syncthing</p>
-<p>cd /home<br>
-wget https://github.com/syncthing/syncthing/releases/download/v1.18.2/syncthing-linux-amd64-v1.18.2.tar.gz<br>
-可以到[GitHub][1]查看最新版本<br>
-#解压<br>
-tar -zxvf syncthing-linux-amd64-v1.3.3.tar.gz<br>
-#进入解压目录将syncthing程序复制到/usr/local/bin目录<br>
-cd syncthing-linux-amd64-v1.3.3<br>
-cp syncthing /usr/local/bin/</p>
-<p>运行</p>
-<p>运行一次syncting</p>
-<p>#启动syncthing命令<br>
-syncthing</p>
-<p>然后ctrl+c结束程序<br>
-修改配置</p>
-<p>sed -i 's/127.0.0.1/0.0.0.0/g' '/root/.config/syncthing/config.xml'</p>
-<p>后台运行</p>
-<p>nohup syncthing &amp;</p>
-<p>日志</p>
-<p>在/var/log/syncthing.log</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ 资本家怎样剥削和压迫工人]]></title>
-        <id>https://kn.al/chiren/</id>
-        <link href="https://kn.al/chiren/">
-        </link>
-        <updated>2021-10-10T01:35:50.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="资本家怎样剥削和压迫工人">资本家怎样剥削和压迫工人</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>可能●爱了</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<meta name="description" content="花开花落自有因！"/>
+<meta name="keywords" content="花开花落自有因！"/>
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<link rel="shortcut icon" href="https://kn.al/favicon.ico">
+
+<link rel="stylesheet" href="https://kn.al/styles/main.css">
+
+<!-- Modernizr JS -->
+<script src="https://kn.al/media/scripts/modernizr-2.6.2.min.js"></script>
+<!-- FOR IE9 below -->
+<!--[if lt IE 9]>
+<scripts src="https://kn.al/media/scripts/respond.min.js"></scripts>
+<![endif]-->
+
+<!-- Comment -->
+
+
+
+<!-- katex -->
+<!--<link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet">-->
+
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+
+
+    <!-- 百度统计 -->
+    <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?fe187e773fc02e2665b8d0c101fcafa5";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+
+
+</head>
+<body>
+    <div id="fh5co-offcanvas">
+    <a href="#!" class="fh5co-close-offcanvas js-fh5co-close-offcanvas">
+        <span><i class="icon-cross3"></i> <span>Close</span></span>
+    </a>
+    <div class="fh5co-bio">
+        <figure>
+            <img src="https://kn.al/images/avatar.png" alt="可能●爱了"
+                 class="img-responsive">
+        </figure>
+        <a href="https://kn.al/post/about/"><h3 class="heading">ABOUT ME</h3></a>
+        <h2>可能●爱了</h2>
+        <p>花开花落自有因！</p>
+        <ul class="fh5co-social">
+            
+                <li>
+                    
+                        <a href="https://github.com/whooc" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    
+                </li>
+            
+                <li>
+                    
+                </li>
+            
+                <li>
+                    
+                </li>
+            
+                <li>
+                    
+                </li>
+            
+                <li>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="fh5co-menu">
+
+        <!-- 标签 -->
+        <div class="fh5co-box">
+            <a href="https://kn.al/tags/"><h3 class="heading">👉标签</h3></a>
+            <ul>
+                
+                    <li><a href="https://kn.al/tag/windows/">windows</a></li>
+                
+                    <li><a href="https://kn.al/tag/L4qp-FgpWP/">阅读</a></li>
+                
+                    <li><a href="https://kn.al/tag/4yEHwerJhi/">centos</a></li>
+                
+                    <li><a href="https://kn.al/tag/2JNDqG6P8o/">syncthing</a></li>
+                
+                    <li><a href="https://kn.al/tag/E9mU2bthpR/">社会</a></li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<header id="fh5co-header">
+    <div class="container-fluid">
+        <div class="row">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <ul class="fh5co-social">
+                
+                    <li>
+                        <a href="/"
+                        
+                        >
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives"
+                        
+                        >
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags"
+                        
+                        >
+                            标签
+                        </a>
+                    </li>
+                
+            </ul>
+            <div class="col-lg-12 col-md-12 text-center">
+                <h1 id="fh5co-logo">
+                    <a href="https://kn.al">可能●爱了 </a>
+                </h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <!--  <a href="#" class="fh5co-post-prev"><span>👈 Prev</span></a>-->
+    <!--  <a href="#" class="fh5co-post-next"><span>Next 👉</span></a>-->
+
+    <!-- 等gridea出自定义页面功能再优化一下 -->
+    
+        <div class="container-fluid">
+    <div class="row fh5co-post-entry single-entry">
+        <article class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
+            <figure class="animate-box">
+                
+                    <img src="https://kn.al/post-images/chiren.png" alt=" 资本家怎样剥削和压迫工人" class="img-responsive">
+                
+            </figure>
+            <span class="fh5co-meta animate-box">
+                
+                    <div class="tag-container">
+                        
+                            <a href="https://kn.al/tag/E9mU2bthpR/" class="tag">社会, </a>
+                        
+                    </div>
+                
+            </span>
+            <h2 class="fh5co-article-title animate-box"> 资本家怎样剥削和压迫工人</h2>
+            <ol class="breadcrumb fh5co-meta fh5co-date animate-box" style="margin-bottom:0; background-color:#f8f9fa">
+                <li>2021年10月10日</li>
+                <li>26293字</li>
+                <li>88 min read</li>
+            </ol>
+
+            <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-left content-article">
+                <div class="row">
+                    <div class="col-md-12 animate-box post-content">
+                        <p> <h1 id="资本家怎样剥削和压迫工人">资本家怎样剥削和压迫工人</h1>
 <p>（1960年）</p>
 <table>
 <thead>
@@ -394,6 +467,147 @@ syncthing</p>
 1965年8月北京第3次印刷<br>
 印数200,001—570,000定价（2）0.16元</p>
 <p>录入和制作：阿芬</p>
-]]></content>
-    </entry>
-</feed>
+ </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 animate-box">
+                        
+                    </div>
+                </div>
+
+                <div class="row">
+    <div class="col-md-12 animate-box">
+        
+    </div>
+</div>
+
+            </div>
+
+        </article>
+    </div>
+</div>
+
+    
+
+    <!-- 返回顶部 -->
+    <div class="back-to-top">
+    
+        <a href="#!" id="tool-toc" class="hidden-xs hidden-sm">
+            <i class="fa fa-map"></i>
+        </a>
+        <br>
+    
+    <a href="#top" class="hidden-xs hidden-sm"><i class="fa fa-paper-plane"></i></a>
+</div>
+
+<div class="post-toc animated fadeInRight hidden-xs hidden-sm" style="display: none;">
+    <ul class="markdownIt-TOC">
+<li><a href="#%E8%B5%84%E6%9C%AC%E5%AE%B6%E6%80%8E%E6%A0%B7%E5%89%A5%E5%89%8A%E5%92%8C%E5%8E%8B%E8%BF%AB%E5%B7%A5%E4%BA%BA">资本家怎样剥削和压迫工人</a><br>
+*
+<ul>
+<li><a href="#%E5%BC%80%E5%A4%B4%E7%9A%84%E8%AF%9D">****开头的话****</a></li>
+<li><a href="#%E4%B8%80-%E4%B8%80%E9%83%A8%E8%82%AE%E8%84%8F%E7%9A%84%E5%8E%86%E5%8F%B2">****一、一部肮脏的历史****</a>
+<ul>
+<li><a href="#%E5%AE%98%E5%83%9A%E5%9C%B0%E4%B8%BB-%E6%91%87%E8%BA%AB%E4%B8%80%E5%8F%98">****官僚地主　摇身一变****</a></li>
+<li><a href="#%E4%B9%B0%E5%8A%9E%E8%B5%B0%E7%8B%97-%E5%94%87%E8%BE%B9%E5%88%86%E8%B5%83">****买办走狗　唇边分赃****</a></li>
+<li><a href="#%E6%8A%95%E6%9C%BA%E5%80%92%E6%8A%8A-%E6%8D%9F%E4%BA%BA%E5%88%A9%E5%B7%B1">****投机倒把　损人利己****</a></li>
+<li><a href="#%E5%B7%A7%E5%8F%96%E8%B1%AA%E5%A4%BA-%E9%9C%B8%E5%8D%A0%E6%B0%91%E8%B4%A2">****巧取豪夺　霸占民财****</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%8C-%E5%88%A9%E6%B6%A6%E6%BB%9A%E6%BB%9A%E4%B8%87%E9%AA%A8%E6%9E%AF">****二、利润滚滚万骨枯****</a>
+<ul>
+<li><a href="#%E6%9C%80%E4%B8%8D%E5%85%AC%E5%B9%B3%E7%9A%84%E4%B9%B0%E5%8D%96">****最不公平的买卖****</a></li>
+<li><a href="#%E4%B8%A4%E7%A7%8D%E4%B8%BB%E8%A6%81%E5%89%A5%E5%89%8A%E6%89%8B%E6%B3%95">****两种主要剥削手法****</a></li>
+<li><a href="#%E6%95%B0%E4%B8%8D%E6%B8%85%E7%9A%84%E5%89%A5%E5%89%8A%E8%8A%B1%E6%A0%B7">****数不清的剥削花样****</a></li>
+<li><a href="#%E7%AB%A5%E5%B7%A5%E8%8B%A6%E4%B8%AD%E8%8B%A6">****童工苦中苦****</a></li>
+<li><a href="#%E5%A4%A9%E4%B8%8B%E4%B9%8C%E9%B8%A6%E4%B8%80%E8%88%AC%E9%BB%91">****天下乌鸦一般黑****</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%89-%E8%A1%80%E8%BF%B9%E6%96%91%E6%96%91%E7%9A%84%E7%BD%AA%E8%A1%8C">****三、血迹斑斑的罪行****</a>
+<ul>
+<li><a href="#%E5%BD%A2%E5%BD%A2%E8%89%B2%E8%89%B2%E7%9A%84%E5%8E%8B%E8%BF%AB%E5%88%B6%E5%BA%A6">****形形色色的压迫制度****</a></li>
+<li><a href="#%E5%B8%AE%E5%87%B6%E8%B5%B0%E7%8B%97%E4%BB%97%E5%8A%BF%E6%AC%BA%E4%BA%BA">****帮凶走狗仗势欺人****</a></li>
+<li><a href="#%E9%9A%8F%E4%BE%BF%E7%B3%9F%E5%AE%B3%E5%92%8C%E5%BC%80%E9%99%A4%E5%B7%A5%E4%BA%BA">****随便糟害和开除工人****</a></li>
+<li><a href="#%E7%A7%81%E8%AE%BE%E6%B3%95%E5%BA%AD%E5%92%8C%E7%9B%91%E7%89%A2">****私设法庭和监牢****</a></li>
+<li><a href="#%E5%8B%BE%E7%BB%93%E5%8F%8D%E5%8A%A8%E6%B4%BE%E5%8E%8B%E8%BF%AB%E5%B7%A5%E4%BA%BA">****勾结反动派压迫工人****</a></li>
+<li><a href="#%E7%AC%91%E9%87%8C%E8%97%8F%E5%88%80%E6%9D%80%E4%BA%BA%E4%B8%8D%E8%A7%81%E8%A1%80">****笑里藏刀，杀人不见血****</a></li>
+</ul>
+</li>
+<li><a href="#%E5%9B%9B-%E6%9C%AC%E6%80%A7%E9%9A%BE%E7%A7%BB">****四、本性难移****</a>
+<ul>
+<li><a href="#%E6%8A%97%E6%8B%92%E6%94%B9%E9%80%A0%E4%B8%8D%E6%96%AD%E5%9C%B0%E5%85%B4%E9%A3%8E%E4%BD%9C%E6%B5%AA">****抗拒改造，不断地兴风作浪****</a></li>
+<li><a href="#%E5%92%8C%E5%B9%B3%E6%BC%94%E5%8F%98%E7%9A%84%E6%96%B0%E9%98%B4%E8%B0%8B">****“和平演变”的新阴谋****</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%94-%E5%85%B4%E6%97%A0%E7%81%AD%E8%B5%84%E9%9D%A9%E5%91%BD%E5%88%B0%E5%BA%95">****五、兴无灭资，革命到底****</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+    
+<footer id="fh5co-footer">
+  <p>©2021 可能爱了 
+深夜入眠方归去，来日相见在几何？</p>
+</footer>
+
+
+    <!-- jQuery -->
+<script src="https://kn.al/media/scripts/jquery.min.js"></script>
+<!-- img lazy load -->
+<script src="https://kn.al/media/scripts/jquery.lazyload.min.js"></script>
+<!-- jQuery Easing -->
+<script src="https://kn.al/media/scripts/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="https://kn.al/media/scripts/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="https://kn.al/media/scripts/jquery.waypoints.min.js"></script>
+<!-- Main JS -->
+<script src="https://kn.al/media/scripts/main.js"></script>
+<!-- Md5 Min JS -->
+<script src="https://kn.al/media/scripts/md5.min.js"></script>
+<!-- katex -->
+<!--<script src="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.js"></script>-->
+<!-- highlight -->
+<script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
+
+
+<script type="application/javascript">
+    // 代码高亮
+    hljs.initHighlightingOnLoad();
+
+    // img 懒加载
+    $(function () {
+        $("img.lazy").lazyload({
+            effect: "fadeIn",  // 懒加载动画
+            threshold: 180  // 在图片距离屏幕180px时提前载入
+        });
+        // tooltip
+        $('[data-toggle="tooltip"]').tooltip();
+
+        // 目录
+        $('#tool-toc').click(function () {
+            $('.post-toc').toggle();
+        });
+    });
+
+    
+        var allImg = $("img");
+        allImg.on("contextmenu", function () {
+            return false;
+        });
+        allImg.on("dragstart", function () {
+            return false;
+        });
+    
+</script>
+
+
+
+
+</body>
+</html>
