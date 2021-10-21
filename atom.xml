@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kn.al</id>
     <title>可能●爱了</title>
-    <updated>2021-10-20T16:06:41.510Z</updated>
+    <updated>2021-10-21T03:41:45.653Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kn.al"/>
     <link rel="self" href="https://kn.al/atom.xml"/>
@@ -10,6 +10,37 @@
     <logo>https://kn.al/images/avatar.png</logo>
     <icon>https://kn.al/favicon.ico</icon>
     <rights>All rights reserved 2021, 可能●爱了</rights>
+    <entry>
+        <title type="html"><![CDATA[无法备案域名使用国内服务器的参考]]></title>
+        <id>https://kn.al/post/no-record-domain/</id>
+        <link href="https://kn.al/post/no-record-domain/">
+        </link>
+        <updated>2021-10-21T03:25:20.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="准备工作">准备工作</h1>
+<p>1.一台国内服务器<br>
+2.一个已备案的域名<br>
+3.一个无法备案的域名</p>
+<h1 id="原理介绍">原理介绍</h1>
+<p>在尝试多种方法无果后，我想到了iframe<br>
+路径：未备案域名-Cloudflare CDN-Github Pages-已备案域名</p>
+<h1 id="实践">实践</h1>
+<p>iframe代码</p>
+<p>`&lt;!doctype html&gt;</p>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>风呼呼</title>
+</head>
+<body>
+    <body style="margin:0px;padding:0px;overflow:hidden">
+        <iframe src="https://kn.al" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe></body>
+</body>
+</html>`
+<p>iframe框架毕竟会有一定限制，酌情使用！</p>
+<h1 id="结果">结果</h1>
+<p>当然是成功啦！</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【杜蕾斯】那些让你脸红心跳的情话大赏]]></title>
         <id>https://kn.al/post/durex/</id>
