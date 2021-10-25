@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kn.al</id>
     <title>可能●爱了</title>
-    <updated>2021-10-25T04:00:18.505Z</updated>
+    <updated>2021-10-25T04:24:37.042Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kn.al"/>
     <link rel="self" href="https://kn.al/atom.xml"/>
@@ -10,6 +10,65 @@
     <logo>https://kn.al/images/avatar.png</logo>
     <icon>https://kn.al/favicon.ico</icon>
     <rights>All rights reserved 2021, 可能●爱了</rights>
+    <entry>
+        <title type="html"><![CDATA[Twikoo 静态博客评论系统]]></title>
+        <id>https://kn.al/post/twikoo/</id>
+        <link href="https://kn.al/post/twikoo/">
+        </link>
+        <updated>2021-10-25T04:01:07.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<h1 id="简介">简介</h1>
+<p>一个简洁、安全、免费的静态网站评论系统，详情介绍<a href="https://twikoo.js.org/">官网</a><br>
+<img src="https://kn.al/post-images/1635135380425.png" alt="" loading="lazy"></p>
+<!-- more -->
+<h1 id="云函数部署">云函数部署</h1>
+<!-- more -->
+<h2 id="一键部署">一键部署</h2>
+<p>[ 不建议 ] 虽然方便，但是仅支持按量计费环境——也就是说，一键部署的环境，当免费资源用尽后，将会产生费用。且按量计费环境无法切换为包年包月环境。免费额度数据库读操作数只有 500 次 / 天，无法支撑 Twikoo 的运行需求。</p>
+<!-- more -->
+<h2 id="手动部署">手动部署</h2>
+<p>[ 建议 ] 手动部署到腾讯云云开发环境，在中国大陆访问速度较快。由于基础版 1 已从 0 元涨价至 6.9 元 / 月，需要付费购买环境才能部署。</p>
+<!-- more -->
+<h2 id="命令行部署">命令行部署</h2>
+<p>[ 不建议 ] 仅针对有 Node.js 经验的开发者。</p>
+<!-- more -->
+<h2 id="vercel-部署">Vercel 部署</h2>
+<p>[ 建议 ] 适用于想要免费部署的用户，在中国大陆访问速度较慢。</p>
+<!-- more -->
+<h2 id="开始vercel部署-其他可去官网学习httpstwikoojsorg">开始Vercel部署 （其他可去官网学习）https://twikoo.js.org</h2>
+<div class="bilibili">
+<iframe src="//player.bilibili.com/player.html?aid=205905942&bvid=BV1Fh411e7ZH&cid=349476933&page=1" scrolling="auto" border="0" frameborder="1" framespacing="1" allowfullscreen="true"> </iframe>
+</div>
+<p>1.申请 MongoDB账号<br>
+<a href="https://www.mongodb.com/cloud/atlas/register">点击申请</a></p>
+<p>2.创建免费 MongoDB 数据库，区域推荐选择 AWS / N. Virginia (us-east-1)</p>
+<p>3.在 Clusters 页面点击 CONNECT，按步骤设置允许所有 IP 地址的连接（为什么？<br>
+(opens new window)），创建数据库用户，并记录数据库连接字符串，请将连接字符串中的 <password> 修改为数据库密码</p>
+<p>4。申请 Vercel<br>
+点击以下按钮将 Twikoo 一键部署到 Vercel<br>
+<a href="https://vercel.com/import/project?template=https://github.com/imaegoo/twikoo/tree/dev/src/vercel-min">一键部署</a><br>
+5.进入 Settings - Environment Variables，添加环境变量 MONGODB_URI，值为第 3 步的数据库连接字符串</p>
+<p>6.进入 Overview，点击 Domains 下方的链接，如果环境配置正确，可以看到 “Twikoo 云函数运行正常” 的提示</p>
+<p>7.Vercel Domains（包含 https:// 前缀，例如 https://xxx.vercel.app）即为您的环境 id</p>
+<h2 id="前端部署">前端部署</h2>
+<p>通过 CDN 引入</p>
+<pre><code>&lt;div id=&quot;tcomment&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/twikoo@1.4.9/dist/twikoo.all.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+twikoo.init({
+  envId: '您的环境id',
+  el: '#tcomment',
+  // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，如果您的环境地域不是上海，需传此参数
+  // path: 'window.location.pathname', // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+  // lang: 'zh-CN', // 用于手动设定评论区语言，支持的语言列表 https://github.com/imaegoo/twikoo/blob/dev/src/js/utils/i18n/index.js
+})
+&lt;/script&gt;
+</code></pre>
+<h2 id="开启管理面板">开启管理面板</h2>
+<p>首次登录需要注册<br>
+点击评论窗口的“小齿轮”图标，粘贴私钥文件内容，并设置管理员密码</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[无法备案域名使用国内服务器的参考]]></title>
         <id>https://kn.al/post/no-record-domain/</id>
