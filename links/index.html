@@ -231,23 +231,18 @@
     头像： https://kn.al/images/avatar.png<br>
     描述： 花开花落自有因！<br>
 </div>
-<!-- CSS -->
-<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
-
-<!-- JS -->
-<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
-
-<!-- Artalk -->
-<div id="Comments"></div>
+<div id="tcomment"></div>
+<script src="https://cdn.jsdelivr.net/npm/twikoo@1.4.9/dist/twikoo.all.min.js"></script>
 <script>
-  new Artalk({
-    el:        '#Comments',
-    pageKey:   'https://kn.al/links/',
-    pageTitle: '可能●爱了',
-    server:    'http://159.75.0.252:8065/api/',
-    site:      '可能爱了',
-  })
+twikoo.init({
+  envId: 'https://twikoo-tau-vert.vercel.app/',
+  el: '#tcomment',
+  // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，如果您的环境地域不是上海，需传此参数
+  // path: 'window.location.pathname', // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+  // lang: 'zh-CN', // 用于手动设定评论区语言，支持的语言列表 https://github.com/imaegoo/twikoo/blob/dev/src/js/utils/i18n/index.js
+})
 </script>
+
 
 
 <footer id="fh5co-footer">
