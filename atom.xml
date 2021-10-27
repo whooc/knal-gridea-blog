@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kn.al</id>
     <title>可能●爱了</title>
-    <updated>2021-10-25T12:53:59.246Z</updated>
+    <updated>2021-10-27T15:14:27.292Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kn.al"/>
     <link rel="self" href="https://kn.al/atom.xml"/>
@@ -10,6 +10,37 @@
     <logo>https://kn.al/images/avatar.png</logo>
     <icon>https://kn.al/favicon.ico</icon>
     <rights>All rights reserved 2021, 可能●爱了</rights>
+    <entry>
+        <title type="html"><![CDATA[docker安装Rocker.Chat聊天室]]></title>
+        <id>https://kn.al/post/rockerchat/</id>
+        <link href="https://kn.al/post/rockerchat/">
+        </link>
+        <updated>2021-10-27T14:56:37.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="相关地址">相关地址</h1>
+<p>github地址<br>
+https://github.com/RocketChat/Rocket.Chat</p>
+<p>docker-compose文档<br>
+https://docs.rocket.chat/installation/docker-containers/docker-compose</p>
+<h1 id="安装">安装</h1>
+<p>假设你已经完成了docker的安装！</p>
+<h2 id="获取docker-compose文件">获取docker-compose文件</h2>
+<pre><code>curl -L https://raw.githubusercontent.com/RocketChat/Rocket.Chat/develop/docker-compose.yml -o docker-compose.yml 
+</code></pre>
+<p>yml为配置文件,端口默认为3000</p>
+<h2 id="启动">启动</h2>
+<pre><code>docker-compose up -d 
+</code></pre>
+<h1 id="访问">访问</h1>
+<p>使用http://IP:3000</p>
+<h2 id="相关命令">相关命令</h2>
+<pre><code>docker-compose stop rocketchat #停止
+docker-compose rm rocketchat    #移除
+docker-compose up -d rocketchat
+</code></pre>
+<h1 id="设置ssl">设置SSL</h1>
+<p>申请SSL证书,使用nginx代理 ip:3000 即可</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Twikoo 静态博客评论系统]]></title>
         <id>https://kn.al/post/twikoo/</id>
